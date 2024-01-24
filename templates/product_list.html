@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      {% load static %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Box icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet"/>
+    <!-- Glide js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" />
+    <!-- Custom StyleSheet -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"/>
+    <title>Products</title>
+  </head>
+  <body>
+    <!-- Header -->
+      <!-- Top Nav -->
+      <div class="top-nav" style="background-color: #e5345b">
+        <div class="container d-flex">
+          <p>Order Online Or Call Us: (254) 700 000 000</p>
+        </div>
+      </div>
+      <div class="navigation">
+        <div class="nav-center container d-flex">
+          <ul class="nav-list d-flex">
+            <li class="nav-item">
+              <a href="{% url 'index' %}" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="{% url 'product_list' %}" class="nav-link">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a href="{% url 'index' %}" class="nav-link">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="{% url 'contact' %}" class="nav-link">Contacts</a>
+            </li>
+          </ul>
+
+          <div class="icons d-flex">
+            <a href="{% url 'login' %}" class="icon"><i class="bx bx-user" style="color: #0a0101"></i></a>
+            <div class="icon" style="color: #0a0101">
+                <i class="bx bx-search"></i>
+            </div>
+            <a href="#" class="icon"><i class="bx bx-cart" style="color: #0a0101"></i></a>
+          </div>
+        </div>
+      </div>
+
+        <!-- product_list.html -->
+
+      <div class="product-center">
+          {% for product in products %}
+              <div class="product-item">
+                <div class="overlay">
+                  <a href="#" class="product-thumb">
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}" />
+                  </a>
+                </div>
+                <div class="product-info">
+                  <a href="">{{ product.name }}</a>
+                  <h3>Ksh {{ product.price }}</h3>
+                </div>
+                <ul class="icons">
+                  <li><i class="bx bx-heart"></i></li>
+                  <li><i class="bx bx-search"></i></li>
+                  <li><i class="bx bx-cart"></i></li>
+                </ul>
+              </div>
+         {% endfor %}
+      </div>
+
+   <!-- Footer -->
+      <footer class="footer" style="background-color: #0a0101">
+          <div class="row">
+             <div class="col-md-6 col-lg-3" style="color: yellow">
+               <h4>Download Our App</h4>
+               <div class="app-logo" style="color: #040a4d">
+                 <img src="{% static 'images/play-store.png' %}" style="width: 150px; height: 50px;">
+                 <img src="{% static 'images/app-store.png' %}" style="width: 150px; height: 50px;">
+               </div>
+             </div>
+            <div class="col-md-6 col-lg-3" style="color: yellow">
+              <h4>Links</h4>
+              <ul class = "list-unstyled">
+                 <li class = "my-2">
+                      <a href = "{% url 'index' %}" class = "text-white text-decoration-none text-muted" style="color:wheat">
+                        <i class = "fas fa-chevron-right me-1" ></i>Home</a>
+                 </li>
+                 <li class = "my-2">
+                     <a href = "{% url 'contact' %}" class = "text-white text-decoration-none text-muted" style="color:wheat">
+                       <i class = "fas fa-chevron-right me-1"></i>Contacts</a>
+                 </li>
+                 <li class = "my-2">
+                     <a href = "{% url 'index' %}" class = "text-white text-decoration-none text-muted" style="color:wheat">
+                        <i class = "fas fa-chevron-right me-1"></i>About Us</a>
+                 </li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                  <h3 class = "fw-light mb-3" style="color: yellow">Follow Us</h3>
+                  <span><i class='bx bxl-facebook-square' style="color:#1c2ce3" ></i></span>
+                  <span><i class='bx bxl-instagram-alt' style="color:#ea1616" ></i></span>
+                  <span><i class='bx bxl-github' style="color: #ffffff"></i></span>
+                  <span><i class='bx bxl-twitter' style="color: #0a58ca"></i></span>
+                  <span><i class='bx bxl-youtube' style="color: red"></i></span>
+            </div>
+          </div>
+      </footer>
+
+
+
+
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
+  <script src="{% static 'js/slider.js' %}"></script>
+  <script src="{% static 'js/index.js' %}"></script>
+</html>

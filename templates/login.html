@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+
+    <!-- STYLE LINK -->
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+    <!-- STYLE LINK -->
+
+    <!-- FONT AWESOME CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- FONT AWESOME CDN -->
+</head>
+<body>
+
+    <div class="signup" style="background-image: url(static/images/bac.png);">
+        <div class="signup-box">
+            <div class="image">
+                <img src="{% static 'images/signup-img.png' %}" alt="">
+            </div>
+            <form method="post" action="{% url 'index' %}">
+                {% csrf_token %}
+                <h3>Log In</h3>
+                <div class="form-group"><input class="form-control" type="text" name="username" placeholder="Enter Your Username"></div>
+                <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Enter Your Password"></div>
+                <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Log In</button></div>
+                <br>
+                <a href="{% url 'signup' %}" style="color: black">Don't have an account? <strong style="color: black">Sign Up</strong></a>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
+

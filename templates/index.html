@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      {% load static %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Glide js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" />
+    <!-- Custom StyleSheet -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"/>
+    <title>Home</title>
+  </head>
+  <body>
+    <!-- Header -->
+        <header class="header" id="header">
+      <!-- Top Nav -->
+      <div class="top-nav" style="background-color: #e5345b">
+        <div class="container d-flex">
+          <p>Order Online Or Call Us: (254) 700 000 000</p>
+        </div>
+      </div>
+      <div class="navigation">
+        <div class="nav-center container d-flex">
+          <ul class="nav-list d-flex">
+            <li class="nav-item">
+              <a href="{% url 'index' %}" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="{% url 'product_list' %}" class="nav-link">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="{% url 'contact' %}" class="nav-link">Contacts</a>
+            </li>
+          </ul>
+
+          <div class="icons d-flex">
+            <a href="{% url 'login' %}" class="icon"><i class="bx bx-user" style="color: #0a0101"></i></a>
+            <div class="icon" style="color: #0a0101">
+                <i class="bx bx-search"></i>
+            </div>
+            <a href="#" class="icon"><i class="bx bx-cart" style="color: #0a0101"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero">
+          <div class="glide" id="glide_1">
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides">
+                <li class="glide__slide">
+                  <div class="center">
+                    <div class="left">
+                      <span class="">New Inspiration 2024</span>
+                      <h1 class="">NEW COLLECTION!</h1>
+                      <p>Trending from men's and women's  style collection</p>
+                      <a href="{% url 'product_list' %}" class="hero-btn">SHOP NOW</a>
+                    </div>
+                    <div class="right">
+                        <img class="img1" src="{% static 'images/hero-1.png' %}" alt="">
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+      </div>
+      </header>
+
+
+    <!-- Categories Section -->
+    <section class="section category">
+      <div class="cat-center">
+        <div class="cat">
+          <img src="{% static 'images/cat3.jpg' %}" alt="" />
+          <div>
+            <p>WOMEN'S WEAR</p>
+          </div>
+        </div>
+        <div class="cat">
+          <img src="{% static 'images/cat2.jpg' %}" alt="" />
+          <div>
+            <p>ACCESSORIES</p>
+          </div>
+        </div>
+        <div class="cat">
+          <img src="{% static 'images/cat1.jpg' %}" alt="" />
+          <div>
+            <p>MEN'S WEAR</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section class="section new-arrival">
+      <div class="title">
+        <h1>NEW ARRIVALS</h1>
+        <p>All the latest picked from designer of our store</p>
+      </div>
+
+      <div class="product-center">
+        <div class="product-item">
+          <div class="overlay">
+            <a href="product_list.html" class="product-thumb">
+              <img src="{% static 'images/c_formal_gray_shirt.png' %}" alt="" />
+            </a>
+          </div>
+          <div class="product-info">
+            <span>DRESS</span>
+            <a href="">Quis Nostrud Exercitation</a>
+            <h4>$700</h4>
+          </div>
+          <ul class="icons">
+            <li><i class="bx bx-heart"></i></li>
+            <li><i class="bx bx-search"></i></li>
+            <li><i class="bx bx-cart"></i></li>
+          </ul>
+        </div>
+        <div class="product-item">
+          <div class="overlay">
+            <a href="" class="product-thumb">
+              <img src="{% static 'images/best_selling_1.jpg' %}" alt="" />
+            </a>
+            <span class="discount">50%</span>
+          </div>
+
+          <div class="product-info">
+            <span>SUIT</span>
+            <a href="">Edor do eiusmod tempor</a>
+            <h4>$800</h4>
+          </div>
+          <ul class="icons">
+            <li><i class="bx bx-heart"></i></li>
+            <li><i class="bx bx-search"></i></li>
+            <li><i class="bx bx-cart"></i></li>
+          </ul>
+        </div>
+        <div class="product-item">
+          <div class="overlay">
+            <a href="" class="product-thumb">
+              <img src="{% static 'images/c_polo-shirt.png' %}" alt="" />
+            </a>
+          </div>
+          <div class="product-info">
+            <span>TOP</span>
+            <a href="">Edor do eiusmod tempor</a>
+            <h4>$150</h4>
+          </div>
+          <ul class="icons">
+            <li><i class="bx bx-heart"></i></li>
+            <li><i class="bx bx-search"></i></li>
+            <li><i class="bx bx-cart"></i></li>
+          </ul>
+        </div>
+
+        <div class="product-item">
+          <div class="overlay">
+            <a href="" class="product-thumb">
+              <img src="{% static 'images/c_pant_girl.png' %}" alt="" />
+            </a>
+          </div>
+          <div class="product-info">
+            <span>WOMEN JEANS TROUSER</span>
+            <a href="">Edor do eiusmod tempor</a>
+            <h4>$560</h4>
+          </div>
+          <ul class="icons">
+            <li><i class="bx bx-heart"></i></li>
+            <li><i class="bx bx-search"></i></li>
+            <li><i class="bx bx-cart"></i></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Promo -->
+
+    <section class="section banner" style="background-color: #9db4c9">
+        <div class="left">
+            <span class="trend"><strong>Trend Design</strong></span>
+            <h1>New Collection 2024</h1>
+            <p>New Arrival <span class="color">Sale 50% OFF</span> Limited Time Offer</p>
+            <a href="{% url 'product_list' %}" class="btn btn-1">Discover Now</a>
+        </div>
+        <div class="right">
+            <img src="{% static 'images/banner.png' %}" alt="">
+        </div>
+    </section>
+
+
+    <!-- Featured -->
+
+    <section class="section new-arrival">
+      <div class="title">
+        <h1>Featured</h1>
+        <p>All the latest picked from designer of our store</p>
+      </div>
+
+      <div class="product-center">
+        <div class="product-item">
+          <div class="overlay">
+            <a href="" class="product-thumb">
+              <img src="{% static 'images/best_selling_2.jpg' %}" alt="" />
+            </a>
+            <span class="discount">50%</span>
+          </div>
+          <div class="product-info">
+            <span>MEN'S CLOTHES</span>
+            <a href="">Quis Nostrud Exercitation</a>
+            <h4>$700</h4>
+          </div>
+          <ul class="icons">
+            <li><i class="bx bx-heart"></i></li>
+            <li><i class="bx bx-search"></i></li>
+            <li><i class="bx bx-cart"></i></li>
+          </ul>
+        </div>
+        <div class="product-item">
+          <div class="overlay">
+            <a href="" class="product-thumb">
+              <img src="{% static 'images/c_western-shirt.png' %}" alt="" />
+            </a>
+          </div>
+
+          <div class="product-info">
+            <span>MEN'S CLOTHES</span>
+            <a href="">Quis Nostrud Exercitation</a>
+            <h4>$800</h4>
+          </div>
+          <ul class="icons">
+            <li><i class="bx bx-heart"></i></li>
+            <li><i class="bx bx-search"></i></li>
+            <li><i class="bx bx-cart"></i></li>
+          </ul>
+        </div>
+        <div class="product-item">
+          <div class="overlay">
+            <a href="" class="product-thumb">
+              <img src="{% static 'images/c_undershirt.png' %}" alt="" />
+            </a>
+            <span class="discount">40%</span>
+          </div>
+          <div class="product-info">
+            <span>MEN'S CLOTHES</span>
+            <a href="">Quis Nostrud Exercitation</a>
+            <h4>$150</h4>
+          </div>
+          <ul class="icons">
+            <li><i class="bx bx-heart"></i></li>
+            <li><i class="bx bx-search"></i></li>
+            <li><i class="bx bx-cart"></i></li>
+          </ul>
+        </div>
+        <div class="product-item">
+          <div class="overlay">
+            <a href="" class="product-thumb">
+              <img src="{% static 'images/c_shirt-girl.png' %}" alt="" />
+            </a>
+          </div>
+          <div class="product-info">
+            <span>MEN'S CLOTHES</span>
+            <a href="">Edor do eiusmod tempor</a>
+            <h4>$900</h4>
+          </div>
+          <ul class="icons">
+            <li><i class="bx bx-heart"></i></li>
+            <li><i class="bx bx-search"></i></li>
+            <li><i class="bx bx-cart"></i></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" style="background-color: #0a0101">
+      <div class="row">
+         <div class="col-md-6 col-lg-3" style="color: yellow">
+           <h4>Download Our App</h4>
+           <div class="app-logo" style="color: #040a4d">
+             <img src="{% static 'images/play-store.png' %}" style="width: 150px; height: 50px;">
+             <img src="{% static 'images/app-store.png' %}" style="width: 150px; height: 50px;">
+           </div>
+         </div>
+        <div class="col-md-6 col-lg-3" style="color: yellow">
+          <h4>Links</h4>
+          <ul class = "list-unstyled">
+             <li class = "my-2">
+                  <a href = "#" class = "text-white text-decoration-none text-muted" style="color:wheat">
+                    <i class = "fas fa-chevron-right me-1" ></i> Home</a>
+             </li>
+             <li class = "my-2">
+                 <a href = "{% url 'contact' %}" class = "text-white text-decoration-none text-muted" style="color:wheat">
+                   <i class = "fas fa-chevron-right me-1"></i>Contacts</a>
+             </li>
+             <li class = "my-2">
+                 <a href = "#" class = "text-white text-decoration-none text-muted" style="color:wheat">
+                    <i class = "fas fa-chevron-right me-1"></i> About Us</a>
+             </li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-3">
+              <h3 class = "fw-light mb-3" style="color: yellow">Follow Us</h3>
+              <span><i class='bx bxl-facebook-square' style="color:#1c2ce3" ></i></span>
+              <span><i class='bx bxl-instagram-alt' style="color:#ea1616" ></i></span>
+              <span><i class='bx bxl-github' style="color: #ffffff"></i></span>
+              <span><i class='bx bxl-twitter' style="color: #0a58ca"></i></span>
+              <span><i class='bx bxl-youtube' style="color: red"></i></span>
+        </div>
+      </div>
+    </footer>
+
+
+
+      <!-- PopUp -->
+    <div class="popup hide-popup">
+        <div class="popup-content">
+          <div class="popup-close">
+            <i class='bx bx-x'></i>
+          </div>
+          <div class="popup-left">
+                <div class="popup-img-container">
+                  <img class="popup-img" src="{% static 'images/popup.jpg' %}" alt="popup">
+                </div>
+          </div>
+          <div class="popup-right">
+            <div class="right-content">
+              <h1>Get Discount <span>50%</span> Off</h1>
+              <p>Sign up to our newsletter and save 30% for you next purchase. No spam!
+              </p>
+              <form action="#">
+                <input type="email" placeholder="Enter your email..." class="popup-form">
+                <a href="#">Subscribe</a>
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
+
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
+  <script src="{% static 'js/slider.js' %}"></script>
+  <script src="{% static 'js/index.js' %}"></script>
+</html>
